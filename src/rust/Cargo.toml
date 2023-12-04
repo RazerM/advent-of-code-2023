@@ -1,0 +1,21 @@
+[package]
+name = "aoc023-rust"
+version = "1.0.0"
+authors = ["Frazer McLean <frazer@frazermclean.co.uk>"]
+edition = "2021"
+publish = false
+# MSRV
+rust-version = "1.63.0"
+
+[dependencies]
+pyo3 = "0.20.0"
+nom = "7.1.3"
+thiserror = "1.0.50"
+
+[features]
+extension-module = ["pyo3/extension-module"]
+default = ["extension-module"]
+
+[lib]
+name = "aoc2023_rust"
+crate-type = ["cdylib"]

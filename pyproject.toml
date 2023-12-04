@@ -1,0 +1,50 @@
+[build-system]
+requires = ["setuptools", "setuptools-rust"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aoc2023"
+version = "1.0"
+description = "My Advent of Code 2023 solutions"
+readme = "README.md"
+requires-python = ">=3.12"
+license = { text = "MIT" }
+authors = [
+	{ name = "Frazer McLean", email = "frazer@frazermclean.co.uk" },
+]
+classifiers = [
+	"License :: OSI Approved :: MIT License",
+	"Programming Language :: Python :: 3",
+	"Programming Language :: Python :: 3 :: Only",
+	"Programming Language :: Python :: 3.12",
+]
+dependencies = [
+	"attrs",
+	"click>=8",
+	"httpx",
+	"isort",
+	"python-dotenv",
+	"regex",
+]
+
+[project.urls]
+repository = "https://github.com/RazerM/advent-of-code-2023"
+
+[project.scripts]
+aoc2023 = "aoc2023.__main__:cli"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["aoc2023*"]
+
+[[tool.setuptools-rust.ext-modules]]
+target = "aoc2023._rust"
+path = "src/rust/Cargo.toml"
+rust-version = ">=1.63.0"
+debug = false # build in release mode even for editable installs
+
+[tool.isort]
+profile = "black"
