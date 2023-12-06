@@ -23,6 +23,7 @@ dependencies = [
 	"click>=8",
 	"httpx",
 	"isort",
+	"numpy",
 	"python-dotenv",
 	"regex",
 ]
