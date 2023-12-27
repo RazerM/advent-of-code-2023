@@ -1,5 +1,6 @@
 import math
 from typing import IO
+
 from numpy.polynomial import Polynomial
 
 from ._registry import register

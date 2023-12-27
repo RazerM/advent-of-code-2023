@@ -42,6 +42,7 @@ def solve(file: IO[str], verbose: int) -> None:
             line,
             regex.VERBOSE,
         )
+        assert match is not None
         winning = [int(s) for s in match.captures("winning")]
         mine = [int(s) for s in match.captures("mine")]
         card_id = int(match["id"])

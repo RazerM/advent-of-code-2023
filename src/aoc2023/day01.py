@@ -48,4 +48,3 @@ def solve(file: IO[str], verbose: int) -> None:
         value = int("".join(first_last(digits(line, words=True))))
         total += value
     print("Part 2:", total)
-
