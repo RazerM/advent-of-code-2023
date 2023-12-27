@@ -17,7 +17,7 @@ digit_words = {
     "nine": "9",
 }
 
-re_digit_words = re.compile(f"({"|".join(digit_words)})")
+re_digit_words = re.compile(f"({'|'.join(digit_words)})")
 
 
 def digits(s: str, /, *, words: bool = False) -> Iterator[str]:
