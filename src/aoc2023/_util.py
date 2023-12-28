@@ -1,5 +1,6 @@
 from collections import deque
 from collections.abc import Iterable, Iterator
+from functools import cached_property, lru_cache
 from typing import Self, cast, overload
 
 from attrs import define
@@ -58,14 +59,15 @@ class Grid[T]:
     def __init__(self, grid: list[list[T]]) -> None:
         self._grid = grid
 
-    @property
+    @cached_property
     def width(self) -> int:
         return len(self._grid[0])
 
-    @property
+    @cached_property
     def height(self) -> int:
         return len(self._grid)
 
+    @lru_cache
     def in_bounds(self, loc: Vector[int]) -> bool:
         return 0 <= loc.x < self.width and 0 <= loc.y < self.height
 
