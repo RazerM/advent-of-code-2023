@@ -32,6 +32,7 @@ impl Game {
 }
 
 #[pyclass]
+#[pyo3(rename_all = "SCREAMING_SNAKE_CASE")]
 #[derive(PartialEq, Eq, Clone, Debug, Hash)]
 enum Colour {
     Red,

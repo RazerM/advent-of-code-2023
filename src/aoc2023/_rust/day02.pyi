@@ -1,9 +1,9 @@
 from typing import ClassVar
 
 class Colour:
-    Red: ClassVar[Colour]
-    Green: ClassVar[Colour]
-    Blue: ClassVar[Colour]
+    RED: ClassVar[Colour]
+    GREEN: ClassVar[Colour]
+    BLUE: ClassVar[Colour]
 
 class Game:
     id: int

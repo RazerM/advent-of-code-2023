@@ -7,8 +7,8 @@ from ._rust.day02 import Colour, parse_game
 
 @register(day=2)
 def solve(file: IO[str], verbose: int) -> None:
-    cubes = {Colour.Red: 12, Colour.Green: 13, Colour.Blue: 14}
-    empty = {Colour.Red: 0, Colour.Green: 0, Colour.Blue: 0}
+    cubes = {Colour.RED: 12, Colour.GREEN: 13, Colour.BLUE: 14}
+    empty = {Colour.RED: 0, Colour.GREEN: 0, Colour.BLUE: 0}
 
     game_powers = []
     possible_games = set()
